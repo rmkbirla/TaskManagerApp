@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  django-app:
+    image: python:3.10-slim
+    container_name: django-app
+    working_dir: /app/TaskManager  # Working directory is TaskManager, where manage.py is located
+    volumes:
+      - .:/app  # Mount the current directory to /app in the container
+      - ./db.sqlite3:/app/db.sqlite3  # Persist SQLite database file
+    ports:
+      - "8000:8000"  # Expose port 8000 for Django server
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: >
+      bash -c "
+      pip install --no-cache-dir -r requirements.txt &&
+      python manage.py migrate &&
+      python manage.py runserver localhost:8000
+      "
+    networks:
+      - django-network
+
+networks:
+  django-network:
+    driver: bridge

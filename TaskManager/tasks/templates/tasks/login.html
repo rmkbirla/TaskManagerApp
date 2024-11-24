@@ -3,6 +3,19 @@
 {% block title %}Login{% endblock %}
 
 {% block content %}
-<h2>Login with Google</h2>
-<a href="{% provider_login_url 'google' %}" class="btn btn-primary">Login with Google</a>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+            <div class="card shadow-lg">
+                <div class="card-body text-center">
+                    <h2 class="card-title mb-4">Login to Your Account</h2>
+                    <p class="card-text">Access your tasks and manage them with ease. Log in to get started.</p>
+                    <a href="{% provider_login_url 'google' %}" class="btn btn-danger btn-block py-3">
+                        <i class="fab fa-google"></i> Login with Google
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
