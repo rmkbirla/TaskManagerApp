@@ -58,11 +58,13 @@ You can run the project in two ways: by directly installing the required depende
    Example `.env` file:
 
    ```env
-   DJANGO_SECRET_KEY=your-secret-key
-   DEBUG=True
-   DATABASE_URL=sqlite:///db.sqlite3
-   GOOGLE_CLIENT_ID=your-google-client-id
-   GOOGLE_CLIENT_SECRET=your-google-client-secret
+   EMAIL_HOST_USER= your_id 
+   EMAIL_HOST_PASSWORD= **** **** **** **** (generate app password grom google console 2 factor authentication passsword will not work)
+
+   SECRET_KEY = 'your_django_secret_key'   
+
+   client_id= 'your_google_OAuth_client_id'
+   secret= 'your_google_OAuth_secret'
    ```
 
 5. **Run Migrations**
