@@ -1,0 +1,12 @@
+<h1>Manage OAuth Keys</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+</form>
+<ul>
+    {% for key in keys %}
+        <li>{{ key.client_id }} - {{ key.client_secret }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'admin_dashboard' %}">Back to Dashboard</a>

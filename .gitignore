@@ -1,0 +1,54 @@
+
+/node_modules
+.env
+package-lock.json
+
+# React build files
+/build
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.sqlite3
+*.log
+
+# Django
+*.env
+db.sqlite3
+/media
+/staticfiles
+*.log
+
+# Virtual Environment
+venv/
+*.py[cod]
+
+# Editor-specific
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Git-specific files
+*.orig
+
+# Coverage
+coverage/
+*.coverage
+.cache
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.egg-info
+.tox/
+dist/
+build/
+.eggs/

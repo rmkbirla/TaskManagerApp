@@ -1,0 +1,12 @@
+<h1>Invite a User</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Send Invitation</button>
+</form>
+<ul>
+    {% for invitation in invitations %}
+        <li>{{ invitation.email }} - {{ invitation.token }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'admin_dashboard' %}">Back to Dashboard</a>
