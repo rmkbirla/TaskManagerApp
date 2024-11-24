@@ -72,6 +72,7 @@ You can run the project in two ways: by directly installing the required depende
    Apply the database migrations to set up the necessary tables:
 
    ```bash
+   cd TaskManager
    python manage.py migrate
    ```
 
